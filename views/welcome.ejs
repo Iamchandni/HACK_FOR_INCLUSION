@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs")-%>
+<style>
+  h1{
+    margin-left: 12%;
+  }
+  p{
+    margin-left: 12%;
+  }
+</style>
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <p class="navbar-brand">DAILY JOURNAL</p>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- 6 -->
+        <li id="home"><a href="/welcome">HOME</a></li>
+        <li id="about"><a href="/write_journal">WRITE JOURNAL</a></li>
+      </ul>
+  </div>
+</nav>
+</div>
+<% post.forEach(function(element){ %>
+  <h1><%= element.title %></h1>
+  <p><%= element.content%></p>
+<% }) %>
+<%- include("partials/footer.ejs")-%>
